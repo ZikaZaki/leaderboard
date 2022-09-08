@@ -1,26 +1,20 @@
-/* Importing Lato fonts */
-@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
-
-/* Importing the "normalize.css" to reset all the default css values */
+/* Importing the "normalize.css" file which is for resetting all the default css values */
 @import url("./normalize.css");
 
-/* ******Global Variables****** */
-:root {
-  /* Fonts */
-  --lato: 'Lato', sans-serif, tahoma, verdana, arial;
-  --sans-serif: sans-serif, 'Lucida Grande', tahoma, verdana, arial;
-  --tahoma: tahoma, 'Lucida Grande', verdana, arial, sans-serif;
-  --verdana: verdana, 'Lucida Grande', tahoma, arial, sans-serif;
-  --open-sans: 'Open Sans', 'Lucida Grande', tahoma, verdana, arial, sans-serif;
+/* Importing Fonts */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
-  /* Colors */
-  --white: #fff;
-  --anti-flash-white: #f1f2f5;
-  --cultured: #f6f6f6;
-  --light-gray: #d3d3d3;
-  --dark-indigo: #2c3e50;
-  --light-indigo: #34495e;
-  --carmine-pink: #ec5242;
+/* ******Main & Secondary Colors****** */
+:root {
+  --bg_color: #fff;
+  --primary: #2c3e50;
+  --primary_light: #34495e;
+  --secondary: #ec5242;
+  --neutral: #d3d3d3;
+  --verdana: verdana, tahoma, sans-serif;
+  --Tahoma: tahoma, verdana, sans-serif;
+  --sans-serif: sans-serif, verdana, tahoma;
+  --open-sans: "Open Sans", sans-serif;
 }
 
 /* **********Global Classes********** */
@@ -35,7 +29,6 @@
 .underline {
   height: 2.5px;
   background-color: var(--primary);
-  width: 100%;
 }
 
 .title h1,
@@ -68,18 +61,12 @@ h3 {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  flex-wrap: nowrap;
-
-  /* gap: 15px; */
+  flex-wrap: wrap;
   background-color: var(--primary_light);
   border-radius: 8px;
   box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1);
   width: 100%;
   height: 50px;
-
-  /* padding: 0 15px; */
-
-  /* height: 3rem; */
   position: relative;
 }
 
@@ -120,7 +107,7 @@ nav a:nth-child(2) {
   width: 100px;
 }
 
-nav .start-form,
+nav .start-contact,
 a:nth-child(2):hover ~ .animation {
   width: 100px;
   left: 120px;
@@ -130,20 +117,10 @@ nav a:nth-child(3) {
   width: 100px;
 }
 
-nav .start-contact,
+nav .start-about,
 a:nth-child(3):hover ~ .animation {
   width: 100px;
   left: 220px;
-}
-
-nav a:nth-child(4) {
-  width: 100px;
-}
-
-nav .start-about,
-a:nth-child(4):hover ~ .animation {
-  width: 100px;
-  left: 320px;
 }
 
 /* =======================================Header End======================================= */
@@ -163,6 +140,7 @@ a:nth-child(4):hover ~ .animation {
 .main-wrapper {
   padding-top: 6rem; /* change to 5rem */
   min-height: 30rem;
+  width: 100%;
 }
 
 .main-date {
@@ -172,32 +150,50 @@ a:nth-child(4):hover ~ .animation {
   font-size: 15px;
   font-weight: bold;
   color: var(--primary);
-  padding: 5px 85px;
+  padding: 5px 45px;
   width: 100%;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 35px;
+  width: 100%;
+  height: 100%;
+  padding: 35px 65px;
+  margin: 0;
 }
 
 /* ======================================Main-Wrapper End==================================== */
 
-/* =============================Books-Collection-Section Start============================= */
-.books-collection {
+/* =============================Scores-Collection-Section Start============================= */
+.title-wrapper {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
+  gap: 15px;
+}
+.scores-collection {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
   flex-wrap: wrap;
-  min-width: auto;
+  gap: 15px;
   width: 100%;
   height: auto;
   background-color: var(--bg_color);
-  padding: 20px 65px;
 }
 
-.books-collection .title {
+.scores-collection .title {
   text-align: center;
-  padding: 25px;
+  padding: 10px;
 }
 
-.books-list {
+.scores-list {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -206,22 +202,23 @@ a:nth-child(4):hover ~ .animation {
   width: 100%;
 }
 
-.book-item {
+.score-item {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   text-align: justify;
+  flex-wrap: wrap;
   background-color: var(--bg_color);
   width: 100%;
-  padding: 10px 25px;
+  padding: 10px 15px;
 }
 
-.book-item:nth-child(odd) {
+.score-item:nth-child(odd) {
   background-color: var(--neutral);
 }
 
-.book-info {
+.score-info {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -229,30 +226,29 @@ a:nth-child(4):hover ~ .animation {
   gap: 5px;
 }
 
-.book-info h2,
+.score-info h2,
 h3 {
   margin: 0;
 }
 
-/* ==============================Books-Collection-Section End============================== */
+/* ==============================Scores-Collection-Section End============================== */
 
-/* ================================Books-Form-Section Start================================ */
-.books-form {
+/* ================================Scores-Form-Section Start================================ */
+.scores-form {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
   flex-wrap: wrap;
-  min-width: auto;
-  width: 100%;
+  width: auto;
   gap: 15px;
   background-color: var(--bg_color);
   height: auto;
-  padding: 35px 65px;
+  margin: 0;
 }
 
-.books-form .title {
-  text-align: center;
+.scores-form .title {
+  font-size: 1.2em;
   padding: 10px;
 }
 
@@ -264,29 +260,37 @@ h3 {
   border: 2px solid var(--primary);
   background-color: var(--neutral);
   list-style: none;
-  gap: 15px;
-  padding: 45px;
+  gap: 25px;
   border-radius: 16px;
-  margin: 0;
   width: 100%;
+  padding: 35px 15px;
+  margin: 0;
 }
 
 .form-list li input {
   border: 2px solid var(--primary);
   border-radius: 8px;
-  min-width: 10rem;
   width: 100%;
   height: 2rem;
 }
 
 .normal-btn {
+  text-align: center;
+  font-weight: bold;
   box-shadow: 3px 3px;
+  border-radius: 8px;
   border: 2px solid var(--primary);
   min-width: 45px;
-  min-height: 25px;
+  min-height: 30px;
+  cursor: pointer;
 }
 
-/* =================================Books-Form-Section End================================= */
+.normal-btn:hover {
+  background-color: var(--primary);
+  color: var(--bg_color);
+}
+
+/* =================================Scores-Form-Section End================================= */
 
 /* =================================Contact-Section Start================================= */
 .contact-us {
@@ -404,7 +408,8 @@ footer .menu li a:hover {
 @media screen
   and (min-width: 586px) {
   .form-list li input {
-    min-width: 25rem;
+    min-width: 15rem;
+    width: 25rem;
     height: 2.5rem;
   }
 }
@@ -412,8 +417,12 @@ footer .menu li a:hover {
 /*******  Second Breakpoint  *******/
 @media screen
   and (min-width: 768px) {
-  .books-collection {
-    padding: 35px 165px;
+  .main-content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    padding: 35px 65px;
   }
 }
 
