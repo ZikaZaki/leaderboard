@@ -5,7 +5,6 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./assets/css/index.css" />
     <title>Leaderboard</title>
 <script defer src="runtime.bundle.js"></script><script defer src="index.bundle.js"></script><script defer src="utils.bundle.js"></script></head>
 
@@ -14,23 +13,61 @@
         <div class="container header">
             <!-- This container is for the header section -->
             <div class="header-logo">
-                <img src="./assets/img/logo.png" alt="header logo">
+                <img id="header_logo" src="#" alt="header logo">
             </div>
             <div class="desktop-menu desktop-visible">
                 <nav>
-                    <a id="home_btn" class="menu-btn" href="#">Books List</a>
-                    <a class="menu-btn" href="#">Add new</a>
+                    <a id="home_btn" class="menu-btn" href="#">Home</a>
+                    <!-- <a class="menu-btn" href="#">Add new</a> -->
                     <a class="menu-btn" href="#">Contact</a>
                     <a class="menu-btn" href="#">About</a>
                     <div class="animation start-home"></div>
                 </nav>
             </div>
         </div>
+
     </header>
     <div class="container main-wrapper">
         <div id="main_date" class="main-date"></div>
         <div class="main-content">
         <!-- The content will be created dynamically using JavaScripts -->
+        <section class="container scores-collection">
+            <div class="title-wrapper">
+                <div class="title">
+                    <h1>Recent scores</h1>
+                    <div class="underline"></div>
+                </div>
+                <div class="refresh-btn">
+                    <button id="refresh_btn" class="normal-btn" type="refresh">
+                        Refresh  <ion-icon name="refresh-outline"></ion-icon>
+                    </button>
+                </div>
+            </div>
+            <div id="scores_list" class="scores-list">
+                <!-- scores object will be generated using JavaScript -->
+            </div>
+        </section>
+        <section class="container scores-form">
+            <div class="title">
+                <h2>Add your score</h2>
+                <div class="underline"></div>
+            </div>
+            <form action="#">
+                <ul class="form-list">
+                    <li class="form-item">
+                        <label for="name_field" hidden>Your name</label>
+                        <input id="name_field" type="text" placeholder="  Your name" maxlength="200" required />
+                    </li>
+                    <li class="form-item">
+                        <label for="score_field" hidden>Your score</label>
+                        <input id="score_field" type="text" placeholder="  Your score" maxlength="100" required />
+                    </li>
+                    <li class="form-item">
+                        <button id="add_score_btn" class="normal-btn" type="submit">Submit</button>
+                    </li>
+                </ul>
+            </form>
+        </section>
         </div>
     </div>
     <footer>
@@ -41,20 +78,19 @@
             <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
         </ul>
         <ul class="menu">
-            <li><a href="#">BOOKS LIST</a></li>
+            <li><a href="#">SCORES LIST</a></li>
             <li><a href="#">ADD NEW</a></li>
             <li><a href="#">CONTACT</a></li>
             <li><a href="#">ABOUT</a></li>
         </ul>
         <div class="footer-logo">
-            <img src="./assets/img/logo.png" alt="footer logo">
-            <p>&COPY; 2022 ZikaZaki Awesome Books | All Rights Reserved</p>
+            <img id="footer_logo" src="#" alt="footer logo">
+            <p>&COPY; 2022 Leaderboard | All Rights Reserved</p>
         </div>
     </footer>
     <!-- JavaScript Files -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    <script type="module" src="./assets/js/index.js"></script>
 </body>
 
 </html>
