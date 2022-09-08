@@ -5,7 +5,7 @@ module.exports = {
   mode: 'development',
   entry: {
     index: './src/index.js',
-    utils: './src/modules/utils.js',// try with this commented out to see if nesting is working
+    utils: './src/modules/utils.js', // try with this commented out to see if nesting is working
   },
   devtool: 'inline-source-map',
   devServer: {

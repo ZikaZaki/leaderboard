@@ -176,6 +176,7 @@ a:nth-child(3):hover ~ .animation {
   align-items: center;
   gap: 15px;
 }
+
 .scores-collection {
   display: flex;
   flex-direction: row;

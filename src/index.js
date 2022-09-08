@@ -1,31 +1,13 @@
-import _ from 'lodash';
+// import _ from 'lodash';
 import './style.css';
 import Logo from './assets/img/logo.png';
 import displayDate from './modules/utils.js';
 import Score from './modules/score.js';
 
-//**********Global Variables************//
+//* *********Global Variables************//
 let scoreList = [];
 const addScoreBtn = document.querySelector('#add_score_btn');
-addScoreBtn.addEventListener('click', addScore);
 const refreshBtn = document.querySelector('#refresh_btn');
-refreshBtn.addEventListener('click', refreshScores);
-
-
-function addScore() {
-  const name = document.querySelector('#name_field');
-  const score = document.querySelector('#score_field');
-  if (name.value === '' || score.value === '') {
-    throw new Error('Please fill in all fields');
-  } else {
-    const scoreObj = new Score(scoreList.length, score.value, name.value);
-    scoreList.push(scoreObj);
-    renderScore(scoreObj);
-    name.value = '';
-    score.value = '';
-  }
-  localStorage.setItem('Scores-List', JSON.stringify(scoreList));
-}
 
 function removeScore() {
   const scoreElement = this.parentNode.parentNode;
@@ -51,11 +33,30 @@ function renderScore(obj) {
   document.querySelector('#scores_list').appendChild(scoreElement);
 }
 
+function addScore() {
+  const name = document.querySelector('#name_field');
+  const score = document.querySelector('#score_field');
+  if (name.value === '' || score.value === '') {
+    throw new Error('Please fill in all fields');
+  } else {
+    const scoreObj = new Score(scoreList.length, score.value, name.value);
+    scoreList.push(scoreObj);
+    renderScore(scoreObj);
+    name.value = '';
+    score.value = '';
+  }
+  localStorage.setItem('Scores-List', JSON.stringify(scoreList));
+}
+
+addScoreBtn.addEventListener('click', addScore);
+
 function refreshScores() {
   const scoresListElement = document.querySelector('#scores_list');
   scoresListElement.innerHTML = '';
   scoreList.forEach((obj) => renderScore(obj));
 }
+
+refreshBtn.addEventListener('click', refreshScores);
 
 window.onload = () => {
   // Setting Header & Footer logos
