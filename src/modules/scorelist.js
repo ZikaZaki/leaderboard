@@ -1,7 +1,7 @@
 class ScoreList {
-    constructor() {
-      this.list = [];
-    }
+  constructor() {
+    this.list = [];
   }
-  
+}
+
 export default ScoreList;
