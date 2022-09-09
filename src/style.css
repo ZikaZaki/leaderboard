@@ -271,7 +271,7 @@ h3 {
 .form-list li input {
   border: 2px solid var(--primary);
   border-radius: 8px;
-  width: 100%;
+  width: 25rem;
   height: 2rem;
 }
 
@@ -405,16 +405,6 @@ footer .menu li a:hover {
 
 /* ====================================Media Query Start==================================== */
 
-/*******  First Breakpoint  *******/
-@media screen
-  and (min-width: 586px) {
-  .form-list li input {
-    min-width: 15rem;
-    width: 25rem;
-    height: 2.5rem;
-  }
-}
-
 /*******  Second Breakpoint  *******/
 @media screen
   and (min-width: 768px) {
@@ -424,6 +414,12 @@ footer .menu li a:hover {
     align-items: flex-start;
     flex-wrap: nowrap;
     padding: 35px 65px;
+  }
+
+  .form-list li input {
+    min-width: 15rem;
+    width: 20rem;
+    height: 2.5rem;
   }
 }
 
