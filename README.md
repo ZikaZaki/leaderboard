@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-#Leaderboard
+# Leaderboard
 
 > This project is part of my **Microverse** exercises, where we start building a **Leaderboard** application for storing a **Leaderboard Scores**. This project follows the [best practices for HTML & CSS](https://github.com/microverseinc/curriculum-html-css/blob/main/articles/html_css_best_practices.md) as well as the [best practices for JavaScript](https://github.com/microverseinc/curriculum-html-css/blob/main/articles/javascript_best_practices.md).
 
