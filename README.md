@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# ToDo-List
+#Leaderboard
 
 > This project is part of my **Microverse** exercises, where we start building a **Leaderboard** application for storing a **Leaderboard Scores**. This project follows the [best practices for HTML & CSS](https://github.com/microverseinc/curriculum-html-css/blob/main/articles/html_css_best_practices.md) as well as the [best practices for JavaScript](https://github.com/microverseinc/curriculum-html-css/blob/main/articles/javascript_best_practices.md).
 
@@ -16,7 +16,7 @@
 
 [![GitHub Pages](https://img.shields.io/badge/GitHub-Pages-blueviolet)](https://livedemo.com)
 
-[Live Demo Link](https://zikazaki.github.io/todo-list/dist/)
+[Live Demo Link](https://zikazaki.github.io/leaderboard/dist/)
 
 ## Getting Started
 
